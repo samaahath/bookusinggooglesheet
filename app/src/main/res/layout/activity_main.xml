@@ -1,0 +1,57 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/outerparentlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/parentlayout"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="50dp"
+        tools:ignore="UselessParent">
+
+
+        <ProgressBar
+            android:id="@+id/progressBar1"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="60dp"
+            android:orientation="vertical">
+
+            <ListView
+                android:id="@+id/gradelistview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@null"
+                android:listSelector="@color/black"
+                android:scrollbars="none" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/emptylayout"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/nointernettext"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/nointernet" />
+    </RelativeLayout>
+</RelativeLayout>

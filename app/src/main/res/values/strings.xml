@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">bookusinggooglesheet</string>
+    <string name="nointernet">No internet connection, click to try again.</string>
+</resources>

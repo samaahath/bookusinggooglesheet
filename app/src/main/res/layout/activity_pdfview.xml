@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".pdfview">
+    <Button
+        android:id="@+id/btnprev"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Prev" />
+    <Button
+        android:id="@+id/btnnext"
+        android:layout_toEndOf="@+id/btnprev"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:text="Next" />
+    <Button
+        android:id="@+id/btnzoomin"
+        android:layout_toEndOf="@+id/btnnext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:text="In" />
+    <Button
+        android:id="@+id/btnzoomout"
+        android:layout_toEndOf="@+id/btnzoomin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:text="Out" />
+    <Button
+        android:id="@+id/btndefault"
+        android:layout_below="@+id/btnzoomout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:text="Default" />
+
+    <EditText
+        android:id="@+id/editTextNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnzoomout"
+        android:layout_toEndOf="@+id/btndefault"
+        android:ems="4"
+        android:inputType="number" />
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/switch1"
+        android:layout_below="@+id/btnzoomout"
+        android:layout_toEndOf="@+id/editTextNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:text="Pager"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+    <!--PDF Viewer to display our PDF-->
+    <com.github.barteksc.pdfviewer.PDFView
+        android:id="@+id/idPDFView"
+        android:layout_below="@+id/switch1"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black">
+
+    </com.github.barteksc.pdfviewer.PDFView>
+
+
+
+
+</RelativeLayout>
